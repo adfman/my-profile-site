@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김지호 | 에이전트 프로필</title>
+  <meta name="description" content="김지호 - 해외 업체의 영업을 대리하는 에이전트 프로필 페이지" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans KR', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    /* 스크롤 시 나타나는 애니메이션 */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body class="bg-white font-sans text-slate-800 antialiased">
+
+  <!-- 헤더 / 네비게이션 -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200/70">
+    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <a href="#top" class="text-lg font-extrabold tracking-tight text-slate-900">
+        김지호<span class="text-brand-600">.</span>
+      </a>
+
+      <!-- 데스크톱 메뉴 -->
+      <ul class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
+        <li><a href="#about" class="nav-link transition hover:text-brand-600">소개</a></li>
+        <li><a href="#skills" class="nav-link transition hover:text-brand-600">기술 스택</a></li>
+        <li><a href="#projects" class="nav-link transition hover:text-brand-600">프로젝트</a></li>
+        <li><a href="#contact" class="nav-link transition hover:text-brand-600">연락처</a></li>
+      </ul>
+
+      <!-- 모바일 햄버거 버튼 -->
+      <button id="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 md:hidden">
+        <svg id="icon-open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- 모바일 메뉴 패널 -->
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white md:hidden">
+      <ul class="flex flex-col px-4 py-3 text-base font-medium text-slate-700">
+        <li><a href="#about" class="nav-link block rounded-lg px-3 py-3 hover:bg-brand-50 hover:text-brand-600">소개</a></li>
+        <li><a href="#skills" class="nav-link block rounded-lg px-3 py-3 hover:bg-brand-50 hover:text-brand-600">기술 스택</a></li>
+        <li><a href="#projects" class="nav-link block rounded-lg px-3 py-3 hover:bg-brand-50 hover:text-brand-600">프로젝트</a></li>
+        <li><a href="#contact" class="nav-link block rounded-lg px-3 py-3 hover:bg-brand-50 hover:text-brand-600">연락처</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-white pt-32 pb-24 sm:pt-40">
+      <div class="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-brand-100/60 blur-3xl"></div>
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal max-w-2xl">
+          <p class="mb-4 inline-flex items-center rounded-full border border-brand-100 bg-white px-3 py-1 text-sm font-medium text-brand-600 shadow-sm">
+            에이전트 · Sales Representative
+          </p>
+          <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            안녕하세요,<br /><span class="block h-[0.5em]" aria-hidden="true"></span>
+            <span class="text-brand-600">김지호</span>입니다.
+          </h1>
+          <p class="mt-6 text-lg leading-relaxed text-slate-600">
+            해외 업체의 영업을 대리하여 국내외 고객과의 연결을 만듭니다.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#contact" class="inline-flex items-center rounded-xl bg-brand-600 px-6 py-3 font-semibold text-white shadow-lg shadow-brand-600/25 transition hover:-translate-y-0.5 hover:bg-brand-700">
+              연락하기
+            </a>
+            <a href="#projects" class="inline-flex items-center rounded-xl border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-brand-600 hover:text-brand-600">
+              프로젝트 보기
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="scroll-mt-20 py-24">
+      <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
+        <div class="reveal">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">About</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">소개</h2>
+        </div>
+        <div class="reveal space-y-5 text-lg leading-relaxed text-slate-600">
+          <p>
+            저는 해외 업체를 대신해 영업 활동을 진행하는 <strong class="font-semibold text-slate-900">에이전트</strong>입니다.
+            제품과 서비스를 현지 시장에 맞게 소개하고, 신뢰를 바탕으로 장기적인 거래 관계를 만들어 갑니다.
+          </p>
+          <p>
+            고객의 요구를 빠르게 파악하고, 업체와 고객 사이에서 원활하게 소통하는 것을 가장 중요하게 생각합니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="scroll-mt-20 bg-slate-50 py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal mb-12 max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">Tech Stack</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">기술 스택</h2>
+          <p class="mt-4 text-slate-600">프로필 페이지를 만드는 데 사용한 기술들입니다.</p>
+        </div>
+        <ul class="reveal flex flex-wrap gap-3">
+          <li class="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm">HTML5</li>
+          <li class="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm">CSS3</li>
+          <li class="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm">JavaScript</li>
+          <li class="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm">Tailwind CSS</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="scroll-mt-20 py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal mb-12 max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">Portfolio</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">프로젝트</h2>
+          <p class="mt-4 text-slate-600">진행했던 주요 영업 대행 프로젝트입니다.</p>
+        </div>
+        <!-- 카드는 script.js의 projects 배열로부터 렌더링됩니다 -->
+        <div id="project-list" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="scroll-mt-20 bg-slate-900 py-24 text-white">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-500">Contact</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">연락처</h2>
+          <p class="mt-4 text-slate-400">협업이나 영업 대행 문의는 언제든 편하게 연락주세요.</p>
+          <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <a href="mailto:your-email@example.com"
+              class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 py-3 font-semibold transition hover:-translate-y-0.5 hover:bg-brand-500">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              이메일 보내기
+            </a>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 px-6 py-3 font-semibold transition hover:-translate-y-0.5 hover:border-brand-500 hover:text-brand-500">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 007.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white py-8">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 text-sm text-slate-500 sm:flex-row sm:px-6">
+      <p>&copy; <span id="year"></span> 김지호. All rights reserved.</p>
+      <a href="#top" class="font-medium transition hover:text-brand-600">맨 위로 ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
